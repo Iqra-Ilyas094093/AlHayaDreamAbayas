@@ -1,3 +1,4 @@
+import 'package:alhayadreamabayas/constants/app_theme.dart';
 import 'package:alhayadreamabayas/view/screens/navigation.dart';
 import 'package:flutter/material.dart';
 
@@ -12,10 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.light,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
       home: Navigation(),
     );
   }
